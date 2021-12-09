@@ -1,0 +1,14 @@
+{#Template for adding/updating currency rate#}
+{#Includes 'rate' and 'date' fields, 'Add' button#}
+
+{% extends 'navbar.html' %}
+
+{% block content %}
+    <div class="container mt-3">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add</button>
+        </form>
+    </div>
+{% endblock %}
